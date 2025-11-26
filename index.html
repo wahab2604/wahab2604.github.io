@@ -425,9 +425,8 @@
         }
 
         .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
+            justify-content: center;
         }
 
         .contact-info h3 {
@@ -468,59 +467,6 @@
             align-items: center;
             justify-content: center;
             font-size: 1.1rem;
-        }
-
-        .contact-form {
-            background: rgba(255,255,255,0.05);
-            padding: 2rem;
-            border-radius: 16px;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: rgba(255,255,255,0.8);
-            font-size: 0.9rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.875rem 1rem;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 8px;
-            color: white;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            background: rgba(255,255,255,0.15);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .contact-form .btn {
-            width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .contact-form .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
         }
 
         /* Footer */
@@ -570,8 +516,8 @@
 
             .about-content,
             .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+                flex-direction: column;
+                align-items: center;
             }
 
             .about-stats {
@@ -841,24 +787,6 @@
                             <span>github.com/wahab2604</span>
                         </a>
                     </div>
-                </div>
-
-                <div class="contact-form">
-                    <form action="mailto:wahab-abdul@outlook.com" method="post" enctype="text/plain">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Your message..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>
